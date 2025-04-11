@@ -1,0 +1,10 @@
+/*website background colour */
+body {
+    background-color: ivory; 
+ }
+ /*search bar colour*/
+ .custom-button {
+    background-color: rgb(7, 191, 228);
+    border-radius: 10px;
+    color: white; 
+ }
