@@ -27,4 +27,47 @@ body {
    color: white;
  }
 
+ .carousel-size{
+ max-height: 500px;
+ margin-top: 20px;
+ justify-content: left;
+ width: 100%;
+ object-fit: cover;
+
+
+ }
+ .carousel-container {
+  max-width: 300px;
+  margin: auto;
+  overflow: hidden;
+  position: relative; /* important for absolute positioning inside */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 20%;
+  top: 0;
+  bottom: 0;
+  position: absolute; 
+  z-index: 10;
+}
+
+.carousel-control-prev {
+  left: 0;
+}
+
+.carousel-control-next {
+  right: 0;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: black; /* make arrows visible */
+  background-size: 100% 100%;
+  border-radius: 50%;
+}
+
+.mainCarousel{
+  justify-content: left;
+}
  
