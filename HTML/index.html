@@ -9,10 +9,12 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
     <!-- My own CSS -->
-    <link rel="stylesheet" href="/CSS/CSS.css">
+    <link rel="stylesheet" href="/CSS/Index.css">
 
     <!-- Google Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <!--ICONS CDNFRONTAWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 
@@ -20,27 +22,42 @@
 <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #B0E0E6;">
     <a class="navbar-brand" href="#">Mindbound</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
     </button>
-    <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-    </li>
+  
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="genrePage.html">Genre</a>
-            </li>
-        </ul>
-        <span class="material-symbols-outlined">
-            how_to_reg
-            </span>            
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="my-2 my-sm-0 custom-button" type="submit">Search</button>
-        </form>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="genrePage.html">Genre</a>
+        </li>
+      </ul>
+  
+      <form class="form-inline my-2 my-lg-0 align-items-center">
+        <!-- Light/Dark Mode Toggle -->
+        <div class="btn">
+          <div class="btn_indicator">
+            <div class="btn_icon-container">
+              <i class="btn_icon fa-solid fa-sun"></i>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Sign In Icon -->
+        <a href="/HTML/SignInPage.html" target="_blank" class="nav-link p-0 ml-2">
+          <span class="material-symbols-outlined" style="font-size: 28px;">how_to_reg</span>
+        </a>
+  
+        <!-- Search -->
+        <input class="form-control ml-2 mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="my-2 my-sm-0 custom-button" type="submit">Search</button>
+      </form>
     </div>
-</nav>
+  </nav>
+  
 
 <!-- promotional banner -->
 <div class="hero-image">
@@ -69,6 +86,8 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <!--fixed footer js-->
-<script src="JS/fixedFooter.js"></script>
+<script src="/JS/fixedFooter.js"></script>
+<!--lightmode darkmode js-->
+<script src="/JS/lightmodeDarkmode.js"></script>
 </body>
 </html>
