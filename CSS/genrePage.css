@@ -1,0 +1,191 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*search bar colour*/
+.custom-button {
+    background-color: rgb(7, 191, 228);
+    border-radius: 10px;
+    color: white; 
+ }
+/* Genre Page Banner */
+.banners-container {
+    display: flex;
+    margin-top: 200px;
+    margin-left: 20px;
+    gap: 120px;
+    justify-content: center;
+    position: relative;
+    overflow: visible;
+}
+
+.banner {
+    background-color: #B0E0E6;
+    width: 180px;
+    height: 60px;
+    padding: 16px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    color: white;
+    position: absolute; /* Ensure position is absolute for the banner */
+    cursor: grab;
+}
+
+.banner:nth-child(1) { top: 200px; right: 250px; }
+.banner:nth-child(2) { top: 200px; right: 30px; }
+.banner:nth-child(3) { top: 200px; left: 30px; }
+.banner:nth-child(4) { top: 200px; left: 250px; }
+.banner:nth-child(5) { top: 200px; left: 500px; }
+
+/* Carousel */
+.carousel-size {
+    max-height: 500px;
+    margin-top: 20px;
+    justify-content: left;
+    width: 100%;
+    object-fit: cover;
+}
+
+.carousel-container {
+    max-width: 300px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 20%;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: 10;
+}
+
+.carousel-control-prev {
+    left: 0;
+}
+
+.carousel-control-next {
+    right: 0;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: black;
+    background-size: 100% 100%;
+    border-radius: 50%;
+}
+
+/* Buttons */
+.btn-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+}
+
+.btn {
+    background-color: #fff;
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    padding: 0 0.5em;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.btn-indicator {
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.btn_icon-container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn_icon {
+    color: #FFDE59;
+    font-size: 1.5rem;
+}
+.darkmode .btn_icon {
+    color: #311587;
+    font-size: 1.5rem;
+}
+/* Dark Mode */
+.darkmode {
+    background-color: #2D828D;
+    color: white;
+}
+
+.darkmode .navbar {
+    background-color: #246871 !important;
+    color: white;
+}
+
+.darkmode .hero-text {
+    color: #fff;
+}
+
+.darkmode .custom-button {
+    background-color: #246871;
+}
+
+.darkmode .hero-text button {
+    background-color: #246871;
+    color: white;
+}
+
+.darkmode #site-footer {
+    background-color: #246871;
+}
+
+.darkmode #footer-text {
+    color: #ccc;
+}
+
+.darkmode .banner {
+    background-color: #246871;
+}
+
+/* Default Footer */
+#site-content {
+    min-height: 100%;
+    min-height: 100vh;
+    padding-top: 65px;
+    position: relative;
+    z-index: 1;
+    box-shadow: #000 0 7px 35px 0;
+}
+
+/* Fixed Footer (for all pages except genre page) */
+#site-footer {
+    padding: 25px 0;
+    font-size: 85%;
+    background-color: #B0E0E6;
+    position: fixed;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    min-height: 20vw;
+    background-size: cover;
+    background-position: center;
+}
+
+#footer-text {
+    text-align: center;
+    color: white;
+}
+
