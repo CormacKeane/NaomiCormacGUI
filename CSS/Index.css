@@ -5,7 +5,61 @@ body {
   margin: 0;
 
 }
+/*search bar colour*/
+.custom-button {
+  background-color: rgb(7, 191, 228);
+  border-radius: 10px;
+  color: white; 
+}
+/*navbar*/
+.navbar{
+position: sticky;
+top: 0;
+padding: 10px 16px;
+}
+/*login icon*/
+.material-symbols-outlined{
+  color:white;
+  cursor: pointer;
+  font-size: 24px; 
+  z-index: 2;
+  position: relative;
+ }
+/*hero image code edited from w3schools*/
+.hero-image {
+background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/banner image1.jpg");
+height: 40vh;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+position: relative;
+}
 
+.hero-text {
+text-align: center;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+color: white;
+}
+
+.hero-text button {
+border: none;
+outline: 0;
+display: inline-block;
+padding: 10px 25px;
+color: black;
+background-color: #ddd;
+text-align: center;
+cursor: pointer;
+}
+
+.hero-text button:hover {
+background-color: #555;
+color: white;
+}
+/*light mode*/
 *{
   margin:0;
   padding:0;
@@ -49,14 +103,7 @@ cursor:pointer;
  color: #FFDE59;
  font-size: 1.5rem ;
 }
- /*login icon*/
- .material-symbols-outlined{
-  color:white;
-  cursor: pointer;
-  font-size: 24px; 
-  z-index: 2;
-  position: relative;
- }
+ 
  .darkmode {
   background-color: #2D828D;
   color: white;
@@ -97,53 +144,6 @@ cursor:pointer;
   pointer-events: auto;
 }
 
- /*search bar colour*/
- .custom-button {
-    background-color: rgb(7, 191, 228);
-    border-radius: 10px;
-    color: white; 
- }
-/*homepage*/
-.navbar{
-  position: sticky;
-  top: 0;
-  padding: 10px 16px;
-}
-/*hero image code edited from w3schools*/
-.hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/banner image1.jpg");
-  height: 40vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
-
-.hero-text {
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-}
-
-.hero-text button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 10px 25px;
-  color: black;
-  background-color: #ddd;
-  text-align: center;
-  cursor: pointer;
-}
-
-.hero-text button:hover {
-  background-color: #555;
-  color: white;
-}
-
 /*footer*/
 #site-content {
 	min-height: 100%;
@@ -170,13 +170,6 @@ cursor:pointer;
 }
 
 
-#site-footer {
-	min-height: 20vw;
-	/* DID THIS SO YOU CAN SEE IT AUTOMATICALLY SCALE - SIMULATION RESPONSIVENESS */
-	/* RESIZE THE WINDOW AND THEN SCROLL VERITCALLY AGAIN */
-	background-size: cover;
-	background-position: center;
-}
 
 #footer-text{
   text-align: center;
