@@ -7,7 +7,7 @@
 /*search bar colour*/
 .custom-button {
     background-color: rgb(7, 191, 228);
-    border-radius: 10px;
+    border-radius: 7px;
     color: white; 
  }
 /* Genre Page Banner */
@@ -29,7 +29,7 @@
     box-sizing: border-box;
     border-radius: 8px;
     color: white;
-    position: absolute; /* Ensure position is absolute for the banner */
+    position: absolute; /* keeps position absolute for the banner */
     cursor: grab;
 }
 
@@ -79,7 +79,7 @@
     border-radius: 50%;
 }
 
-/* Buttons */
+/* lighmode button*/
 .btn-wrapper {
     display: flex;
     justify-content: center;
@@ -122,6 +122,7 @@
 .darkmode .btn_icon {
     color: #311587;
     font-size: 1.5rem;
+    
 }
 /* Dark Mode */
 .darkmode {
@@ -169,7 +170,7 @@
     box-shadow: #000 0 7px 35px 0;
 }
 
-/* Fixed Footer (for all pages except genre page) */
+/* Fixed Footer */
 #site-footer {
     padding: 25px 0;
     font-size: 85%;
@@ -179,9 +180,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    min-height: 20vw;
-    background-size: cover;
-    background-position: center;
+ 
 }
 
 #footer-text {
