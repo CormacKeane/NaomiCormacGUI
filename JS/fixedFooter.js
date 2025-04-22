@@ -1,28 +1,16 @@
+// Waits until the page is fully loaded
 $(document).ready(function() {
-	
-	// INITIATE THE FOOTER
-  siteFooter();
-	// COULD BE SIMPLIFIED FOR THIS PEN BUT I WANT TO MAKE IT AS EASY TO PUT INTO YOUR SITE AS POSSIBLE
-	$(window).resize(function() {
-		siteFooter();
-	});
-	
-	function siteFooter() {
-		var siteContent = $('#site-content');
-		var siteContentHeight = siteContent.height();
-		var siteContentWidth = siteContent.width();
-
-		var siteFooter = $('#site-footer');
-		var siteFooterHeight = siteFooter.height();
-		var siteFooterWidth = siteFooter.width();
-
-		console.log('Content Height = ' + siteContentHeight + 'px');
-		console.log('Content Width = ' + siteContentWidth + 'px');
-		console.log('Footer Height = ' + siteFooterHeight + 'px');
-		console.log('Footer Width = ' + siteFooterWidth + 'px');
-
-		siteContent.css({
-			"margin-bottom" : siteFooterHeight + 50
-		});
-	};
-});
+	function adjustFooterSpacing() {
+	  const footer = $('#site-footer');
+	  const content = $('#site-content');
+  
+	  if (footer.length && content.length) {
+		const footerHeight = footer.outerHeight();
+		content.css('margin-bottom', footerHeight + 50);
+	  }
+	}
+  
+	adjustFooterSpacing(); // runs when the page loads
+	$(window).on('resize', adjustFooterSpacing); // runs when the window is resized
+  });
+  
