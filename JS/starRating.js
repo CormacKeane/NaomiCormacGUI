@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
+    
+
 //accessing all label elements and storing them in a variable called stars
 let stars= document.querySelectorAll(".rating label");
 //acessing all div elements and storing them in a variable called books
@@ -34,7 +36,7 @@ for(let star of stars){
         //creates a variable called rating and stores the data-ratings attribute value
         let rating=this.dataset.rating;
         let booksId=this.parentElement.dataset.booksid;
-        //creating an object called data that will hold rating value and bookId
+    //creating an object called data that will hold rating value and bookId
         let data={
             "stars":rating,
             "books-id":booksId
