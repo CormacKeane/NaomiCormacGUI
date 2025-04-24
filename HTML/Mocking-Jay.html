@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Mindbound</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!--FAVICON-->
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/logo.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/logo.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/iimg/logo.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/iimg/logo.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <!-- My own CSS -->
+  <link rel="stylesheet" href="/CSS/bookDescriptionPage.css">
+  <!-- Google Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+      <!--ICONS CDNFRONTAWESOME-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ 
+
+
+</head>
+<body>
+  <!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #B0E0E6;">
+  <a class="navbar-brand" href="#">Mindbound</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/HTML/index.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/HTML/genrePage.html">Genre</a>
+      </li>
+    </ul>
+
+    <form class="form-inline my-2 my-lg-0 align-items-center">
+      <!-- Light/Dark Mode Toggle -->
+      <div class="btn">
+        <div class="btn_indicator">
+          <div class="btn_icon-container">
+            <i class="btn_icon fa-solid fa-sun"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sign In Icon -->
+      <a href="/HTML/SignInPage.html" target="_blank" class="nav-link p-0 ml-2">
+        <span class="material-symbols-outlined" style="font-size: 28px;">how_to_reg</span>
+      </a>
+
+      <!-- Search -->
+      <input class="form-control ml-2 mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="my-2 my-sm-0 custom-button" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+    <!-- Wrapper for Image and Description (Flexbox Container) -->
+    <div class="image-description-container">
+    <!--link from image of book to webpage-->
+    <a href="/HTML/Mocking-Jay.html">
+        <img src="/img/ mocking jay.JPG" alt="Mocking-Jay" class="book-image">
+      </a>
+<!--description box with all the information about the book-->
+<div class="description-box">
+    <h3>the hunger games</h3>
+  <div class="book-title">Mocking Jay #3</div>
+  <div class="book-author">Suzanne Collins</div>
+
+        <p><br>War has stripped the world of color, and Katniss Everdeen is no longer a girl on fire—she’s a shadow burning from the inside out. Thrust into the heart of a rebellion she never asked for, she becomes a living weapon forged by trauma, tragedy, and televised lies. The Capitol crumbles, but so does everything human in her.
+
+            Beneath the banners of freedom, puppeteers pull strings with bloodied hands. Allies become strangers. Truth is a minefield. Love is collateral. <span id="dots">...</span><span id="more">And hope? Hope is a currency spent far too easily in the rubble of what used to be home.
+
+                This is not a victory march. It’s the slow disintegration of a soul made into a symbol. Mockingjay is the story of survival, yes—but it’s also the quiet, aching question that follows: what survives you?<br>  <div class="book-pages">390 pages, Hardcover<br>
+
+                    First published August 24, 2010</div></span></p>
+        <button onclick="myFunction()" id="myBtn">Read more</button>
+      
+      </div>
+    </div>
+    <!--read button-->
+<a href="https://online.fliphtml5.com/pezzr/dume/#p=1" class="read-button" target="_blank">
+  <span class="text">Read</span>
+  <span class="divider"></span>
+  <i class="book fa-solid fa-book-open"></i>
+</a>
+<!-- star rating -->
+<div class="rating-wrapper">
+  <div class="rating" data-booksid="book1">
+    <input type="radio" id="star5" name="clr1" value="5" />
+    <label for="star5" data-rating="5"></label>
+
+    <input type="radio" id="star4" name="clr1" value="4" />
+    <label for="star4" data-rating="4"></label>
+
+    <input type="radio" id="star3" name="clr1" value="3" />
+    <label for="star3" data-rating="3"></label>
+
+    <input type="radio" id="star2" name="clr1" value="2" />
+    <label for="star2" data-rating="2"></label>
+
+    <input type="radio" id="star1" name="clr1" value="1" />
+    <label for="star1" data-rating="1"></label>
+  </div>
+</div>
+
+
+ <!-- Bootstrap JS + dependencies -->
+ <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!--lightmode darkmode js-->
+<script src="/JS/lightmodeDarkmode.js"></script>
+<!--star rating js-->
+<script src="/JS/starRating.js"></script>
+<!--read more-->
+<script src="/JS/readmore.js"></script>
+
+
+</body>
+</html>
