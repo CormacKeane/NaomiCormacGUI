@@ -13,12 +13,14 @@
 /* Genre Page Banner */
 .banners-container {
     display: flex;
-    margin-top: 200px;
+    margin-top: 50px;
     margin-left: 20px;
-    gap: 120px;
-    justify-content: center;
-    position: relative;
+    align-items: center;
+    gap: 100px;
+    justify-content: space-evenly;
     overflow: visible;
+    width: 100%; 
+    position: relative;
 }
 
 .banner {
@@ -29,20 +31,19 @@
     box-sizing: border-box;
     border-radius: 8px;
     color: white;
-    position: absolute; /* keeps position absolute for the banner */
     cursor: grab;
+    position: absolute;
 }
-
-.banner:nth-child(1) { top: 200px; right: 250px; }
-.banner:nth-child(2) { top: 200px; right: 30px; }
-.banner:nth-child(3) { top: 200px; left: 30px; }
-.banner:nth-child(4) { top: 200px; left: 250px; }
-.banner:nth-child(5) { top: 200px; left: 500px; }
+.banner:nth-child(1) { top: 0px; left: 5%; }
+.banner:nth-child(2) { top: 0px; left: 25%; }
+.banner:nth-child(3) { top: 0px; left: 45%; }
+.banner:nth-child(4) { top: 0px; left: 65%; }
+.banner:nth-child(5) { top: 0px; left: 85%; }
 
 /* Carousel */
 .carousel-size {
     max-height: 500px;
-    margin-top: 20px;
+    margin-top: 10px;
     justify-content: left;
     width: 100%;
     object-fit: cover;
@@ -53,6 +54,8 @@
     margin: auto;
     overflow: hidden;
     position: relative;
+    justify-content: flex-start;
+
 }
 
 .carousel-control-prev,
