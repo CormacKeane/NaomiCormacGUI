@@ -25,6 +25,9 @@
   padding: 20px;
   width: 800px
 }
+#h3{
+  font-family:Papyrus;
+}
 /*book pages*/
 .book-pages{
   font-size: 15px;
