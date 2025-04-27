@@ -14,7 +14,7 @@
 /*book author*/
 .book-author{
   font-family: Lucida Handwriting;
-  font-size: 25px;
+  font-size: 15px;
 }
 /*decription box*/
 .description-box{
@@ -35,6 +35,12 @@
 }
 /*read more function*/
 #more {display: none;
+
+}
+.more-like-this{
+ font-family:Papyrus;
+ font-size: 15px;
+
 
 }
 
@@ -76,7 +82,7 @@
   .read-button .divider {
     width: 2px; /* White line width */
     height: 20px; /* Height of the line */
-    background-color: white; /* White line color */
+    background-color: white; /* White line colour */
     margin-right: 10px; /* Space between line and icon */
   }
   
