@@ -1,14 +1,22 @@
+body {
+    padding-bottom: 100px; 
+.reading-list {
+    background: #B0E0E6; 
+}
 
+  }
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: white;
+
 }
 /*search bar colour*/
 .custom-button {
     background-color: rgb(7, 191, 228);
     border-radius: 7px;
-    color: white; 
+    color: rgb(255, 255, 255); 
  }
 /* Genre Page Banner */
 .banners-container {
@@ -40,32 +48,29 @@
 .banner:nth-child(4) { top: 0px; left: 65%; }
 .banner:nth-child(5) { top: 0px; left: 85%; }
 
+
 /* Carousel */
-.carousels-wrapper {
-    display: flex;
-    justify-content: left;
-    align-items: flex-start;
-    gap: 30px !important; 
-    flex-wrap: wrap; 
-}
-.carousel-size {
-    max-height: 500px !important;
-    margin-top: 10px!important;
-    justify-content: left !important;
-    width: 100%;
-    object-fit: contain;
-}
-
+/* Carousel Container */
 .carousel-container {
-    max-width: 100% !important;
-    margin:0;
-    overflow: hidden;
-    position: relative;
-    justify-content: flex-start!important;
-  
-
+    max-width: 100% !important; /* Ensures full-width */
+    margin: 0;
+    margin-bottom: 2rem;
+    padding: 0.5rem;
+    position: relative; /* Allows proper positioning of child elements */
+    overflow: hidden; /* Prevents overflowing content */
 }
 
+/* Carousel Image/Item */
+.carousel-item {
+    position: relative; /* Ensures previews position correctly */
+}
+.carousel-container {
+    border: 2px solid #21656e; /* Adds a border around the carousel */
+    border-radius: 10px; /* Rounds the corners of the border */
+    padding: 10px; /* Adds spacing between the border and the content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for emphasis */
+}
+/* Carousel Controls */
 .carousel-control-prev,
 .carousel-control-next {
     width: 20%;
@@ -74,14 +79,14 @@
     position: absolute;
     z-index: 10;
 }
-
-.carousel-control-prev {
-    left: 0;
+.carousel-genre-name {
+    text-align: center; /* Centers the text under the image */
+    font-size: 1.2rem; /* Adjusts the font size */
+    font-weight: bold; /* Makes the genre name bold */
+    margin-top: 10px; /* Adds spacing between image and genre name */
+    color:#B0E0E6; /* Adjust the color as needed */
 }
 
-.carousel-control-next {
-    right: 0;
-}
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
@@ -89,25 +94,37 @@
     background-size: 100% 100%;
     border-radius: 50%;
 }
-/*book description preview*/
 .carousel-inner {
-    overflow: visible !important;/*!important allows me to override bootstrap*/
-  }
-.carousel-container {
-    position: relative; /* keeps the preview positioned correctly */
-    overflow: visible;  /* allows the preview to show outside show outside */
-  }
-  
-  .carousel-item {
-    position: relative;
-  }
-  
+    overflow: hidden !important; /* Prevents images from overflowing */
+}
+* Display preview on hover */
+.carousel-item:hover .book-preview {
+    display: block;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.carousel-size {
+    max-height: 500px !important; /* Adjusts image height */
+    margin-top: 10px;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Ensures the carousel items are properly aligned */
+.carousels-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+}
   .book-preview {
     position: absolute;
     top: 0;
     left: 100%; /* places it just to the right of the image */
     transform: translateX(10px);
-    background: #B0E0E6;;
+    background: #B0E0E6;
     padding: 12px;
     border-radius: 8px;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
@@ -205,16 +222,108 @@
 .darkmode .banner {
     background-color: #246871;
 }
-
-/* Default Footer */
-#site-content {
-    min-height: 100%;
-    min-height: 100vh;
-    padding-top: 65px;
+/*hero image code edited from w3schools*/
+.hero-banner {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/banner image2.webp");
+    height: 300px; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     position: relative;
-    z-index: 1;
-    box-shadow: #000 0 7px 35px 0;
 }
+    .hero-content {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    }
+/*Most Popular*/
+.popular-books-container {
+    margin-top: 40px;
+    margin-right: 50px;
+}
+
+.popular-category {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #7dc8b7;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.popular-category h3 {
+    font-size: 1.5em;
+    color: #B0E0E6;
+    margin-bottom: 20px;
+    color: white;
+    text-align: center;
+}
+#most-popular {
+    text-align: center;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ecd2e9;
+    transform: translateX(-10px); /* Moves the section slightly to the left */
+}
+  
+#most-popular h4 {
+    font-size: 1em;
+    color: #f1f2f3;
+    margin-bottom: 20px;
+}
+  
+.popular-books {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+  
+.popular-books .book {
+    width: 150px;
+    text-align: center;
+}
+  
+.popular-books .book img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+  
+.popular-books .book img:hover {
+    transform: scale(1.05);
+}
+  
+/*Reading List*/
+.view-list-button {
+    padding: 8px 16px;
+    background-color: #B0E0E6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 2em;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  
+  .reading-list {
+    margin-top: 30px;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .reading-list h3 {
+    margin-bottom: 10px;
+  }
+  
+  .reading-list ul {
+    list-style: disc;
+    padding-left: 20px;
+  }
+  
 
 /* Fixed Footer */
 #site-footer {
@@ -222,7 +331,7 @@
     font-size: 85%;
     background-color: #B0E0E6;
     position: fixed;
-    z-index: -1;
+    z-index: 999;
     left: 0;
     right: 0;
     bottom: 0;
