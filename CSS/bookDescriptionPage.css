@@ -16,6 +16,27 @@
   font-family: Lucida Handwriting;
   font-size: 15px;
 }
+
+/* Ensures the book-preview is hidden by default */
+.book-preview {
+  display: none;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: rgb(22, 21, 21);
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 10;
+  width: 90%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* Shows the book-preview on hover */
+.carousel-item:hover .book-preview {
+  display: block;
+}
 /*decription box*/
 .description-box{
   background-color:#B0E0E6;
@@ -87,7 +108,7 @@
   }
   
   .read-button i.book {
-    margin-left: 10px; /* Space between the white line and the book icon */
+    margin-left: 10px; /* Makes space between the white line and the book icon */
   }
 /*star rating */
 .rating {
