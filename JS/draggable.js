@@ -6,6 +6,12 @@ const dropZones = document.querySelectorAll('section');
 //og spot
 const boxCon=document.querySelector('.box-container');
 
+
+//swaps to genre page from index
+function Genre() {
+    window.location.href="genrePage.html";
+}
+
 //assigning drag to boxes
 box.forEach((el) => {
     el.ondragstart = function(e) {
@@ -84,18 +90,33 @@ function whatGenres() {
     sortGenre(zone1,zone2);
 }
 
-
-
-
-
-
 function sortGenre(zone1,zone2) {
     const overlappingBooks = zone1.filter(book => zone2.includes(book));
 
-    console.log(overlappingBooks);
+    sessionStorage.setItem('overlappingBooks', JSON.stringify(overlappingBooks));
+    window.location.href="filteredPage.html";
 }
 
 
+
+
+function populateCarousel(imageArray, carouselId) {
+    const carousel = document.querySelector(`#${carouselId} .carousel-inner`);
+
+    // Clear existing items (except genre label if needed)
+    const genreLabel = carousel.querySelector('.carousel-genre-name');
+    carousel.innerHTML = '';
+    if (genreLabel) carousel.appendChild(genreLabel); // Keep the label
+
+    imageArray.forEach((fileName, index) => {
+        const item = document.createElement('div');
+        item.className = 'carousel-item' + (index === 0 ? ' active' : '');
+        item.innerHTML = `
+      <img class="d-block w-100 carousel-size" src="/img/${fileName}" alt="${fileName}">
+    `;
+        carousel.appendChild(item);
+    });
+}
 
 
 
@@ -322,119 +343,4 @@ const genre = {
         "Born at Midnight"
     ]
 
-}
-
-
-
-<!-- draggable boxes -->
-
-<div class="box-container">
-    <div class="selectionBox" draggable="true" id="romance"><strong>Romance</strong></div>
-    <div class="selectionBox" draggable="true" id="fantasy"><strong>Fantasy</strong></div>
-    <div class="selectionBox" draggable="true" id="youngAdult"><strong>Young_Adult</strong></div>
-    <div class="selectionBox" draggable="true" id="horror"><strong>Horror</strong></div>
-    <div class="selectionBox" draggable="true" id="dystopian"><strong>Dystopian</strong></div>
-</div>
-
-<!-- drop zones  for selectionBoxes-->
-<div class="dropBut-container">
-
-    <div class="drop-container">
-        <section class="dropZone"></section>
-        <section class="dropZone"></section>
-    </div>
-
-    <div class="selectButton">
-        <button type="button" id="selectButton" onclick="whatGenres()"><strong>select</strong></button>
-    </div>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /* draggable boxes */
-    .box-container {
-    display: flex;
-    margin-top: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    align-items: center;
-    gap: 100px;
-    justify-content: space-evenly;
-    overflow: visible;
-    width: 100%;
-    position: relative;
-}
-
-.selectionBox {
-    background-color: #B0E0E6;
-    width: 200px;
-    height: 60px;
-    padding: 16px;
-    box-sizing: border-box;
-    border-radius: 8px;
-    color: white;
-    cursor: grab;
-    text-align: center;
-    position: relative;
-}
-
-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    height: 100%;
-    width: 100%;
-}
-.dropBut-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 30px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.drop-container {
-    display: flex;
-    flex-direction: row;
-    gap: 50px;
-}
-
-.dropZone {
-    width: 180px;
-    height: 60px;
-    padding: 5px;
-    box-sizing: border-box;
-    border-radius: 8px;
-    border-color: white;
-    border-style: dashed;
-    position: relative;
-}
-
-
-#selectButton {
-    width: 180px;
-    height: 60px;
-    display: block;
-    position: relative;
-    background-color: #2D828D;
-    padding: 16px;
-    border-radius: 8px;
-    text-align: center;
-    color: white;
-    margin-top: 10px;
 }

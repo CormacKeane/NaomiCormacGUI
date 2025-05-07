@@ -5,6 +5,9 @@ body {
     background: #B0E0E6; 
 }
 
+.Row-centered {
+    margin: auto;
+}
 
 * {
     margin: 0;
@@ -30,12 +33,12 @@ body {
     gap: 100px;
     justify-content: space-evenly;
     overflow: visible;
-    width: 100%; 
+    width: 100%;
     position: relative;
 }
 
 .selectionBox {
-    background-color: #B0E0E6;
+    background-color: #2D828D;
     width: 200px;
     height: 60px;
     padding: 16px;
@@ -78,7 +81,7 @@ section {
     padding: 5px;
     box-sizing: border-box;
     border-radius: 8px;
-    border-color: white;
+    border-color:#2D828D;
     border-style: dashed;
     position: relative;
 }
@@ -134,7 +137,7 @@ section {
     font-size: 1.2rem; /* Adjusts the font size */
     font-weight: bold; /* Makes the genre name bold */
     margin-top: 10px; /* Adds spacing between image and genre name */
-    color:#B0E0E6; /* Adjust the color as needed */
+    color:#2D828D; /* Adjust the color as needed */
 }
 
 
