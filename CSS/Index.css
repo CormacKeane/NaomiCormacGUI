@@ -28,6 +28,16 @@ padding: 10px 16px;
   z-index: 2;
   position: relative;
  }
+
+.genreButton {
+  color: white;
+  border-radius: 8px;
+  background-color: #2D828D;
+  margin-top: 80px;
+  padding: 24px 48px;
+  font-size: 40px;
+  text-decoration: none;
+}
 /*hero image code edited from w3schools*/
 .hero-image {
 background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/banner image1.jpg");

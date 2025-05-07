@@ -1,130 +1,18 @@
-//selection boxes
-const box = document.querySelectorAll('.selectionBox');
-let draggedElement=null;
-//dropzones
-const dropZones = document.querySelectorAll('section');
-//og spot
-const boxCon=document.querySelector('.box-container');
-
-
-//swaps to genre page from index
-function Genre() {
-    window.location.href="genrePage.html";
-}
-
-//assigning drag to boxes
-box.forEach((el) => {
-    el.ondragstart = function(e) {
-        draggedElement = e.target;
-        this.style.opacity = '0.5';
-    }
-
-    el.ondragend = function(e) {
-        this.style.opacity = '1';
-    }
-})
-
-
-// Assign drop logic to all zones
-dropZones.forEach(zone => {
-    zone.addEventListener('dragover', function (e) {
-        e.preventDefault();
-        this.classList.add('over');
-    });
-
-    zone.addEventListener('dragleave', function () {
-        this.classList.remove('over');
-    });
-
-    zone.addEventListener('drop', function (e) {
-        e.preventDefault();
-        this.classList.remove('over');
-
-        // Only allow drop if the dropzone's empty
-        if (this.children.length === 0 && draggedElement) {
-            this.appendChild(draggedElement);
-        } else {
-            alert("one box per zone!")
-        }
-    });
-});
-
-//allows reseting box to og spot
-boxCon.addEventListener('dragover', function (e) {
-    e.preventDefault();
-});
-
-boxCon.addEventListener('drop', function (e) {
-    e.preventDefault();
-    if(draggedElement) {
-        this.appendChild(draggedElement);
-    }
-})
-
-
-function whatGenres() {
-    let zone1 = null;
-    let zone2 = null;
-    let zoneOne = null;
-    let zoneTwo = null;
-
-
-    for (let i = 0; i < dropZones.length; i++) {
-        const zone = dropZones[i];
-
-        if (zone.children.length > 0) {
-            const genreName=zone.children[0].textContent.trim();
-            if (i === 0) {
-                zoneOne =zone.children[0].textContent
-                zone1 =genre[genreName];
-            } else if (i === 1) {
-                zoneTwo =zone.children[0].textContent
-                zone2 =genre[genreName];
-            }
-        } else {
-            console.log("Dropzone "+(i + 1)+" is empty");
-        }
-    }
-
-    console.log(zoneOne+" and "+zoneTwo);
-    sortGenre(zone1,zone2);
-}
-
-function sortGenre(zone1,zone2) {
+/*function sort(zone1,zone2) {
     const overlappingBooks = zone1.filter(book => zone2.includes(book));
 
-    sessionStorage.setItem('overlappingBooks', JSON.stringify(overlappingBooks));
-    window.location.href="filteredPage.html";
-}
-
-
-
-
-function populateCarousel(imageArray, carouselId) {
-    const carousel = document.querySelector(`#${carouselId} .carousel-inner`);
-
-    // Clear existing items (except genre label if needed)
-    const genreLabel = carousel.querySelector('.carousel-genre-name');
-    carousel.innerHTML = '';
-    if (genreLabel) carousel.appendChild(genreLabel); // Keep the label
-
-    imageArray.forEach((fileName, index) => {
-        const item = document.createElement('div');
-        item.className = 'carousel-item' + (index === 0 ? ' active' : '');
-        item.innerHTML = `
-      <img class="d-block w-100 carousel-size" src="/img/${fileName}" alt="${fileName}">
-    `;
-        carousel.appendChild(item);
-    });
+    console.log(overlappingBooks);
 }
 
 
 
 
 
-const genre = {
 
-    Romance: ["The Love Hypothesis",
+
+const genre =[
+
+    Romance =["The Love Hypothesis",
         "The Spanish Love Deception",
         "Flirting Lessons",
         "The Exiled Prince",
@@ -181,7 +69,7 @@ const genre = {
         "The Vincent Brothers",
         "Poison Study",
         "The Darkest Pleasure",
-        "Born at Midnight", "Powerless",
+        "Born at Midnight","Powerless",
         "Once Upon a Broken Heart",
         "The Ballad of Never After",
         "A Curse for True Love",
@@ -193,7 +81,7 @@ const genre = {
         "City of Bones",
         "One Dark Window"],
 
-    Dystopian: ["Unwind",
+    Dystopian = ["Unwind",
         "Thunderhead",
         "Scythe",
         "Divergent",
@@ -221,7 +109,8 @@ const genre = {
     ],
 
 
-    Horror: ["When the Bones Sing",
+
+    Horror = [ "When the Bones Sing",
         "It",
         "The Shining",
         "Mexican Gothic",
@@ -247,7 +136,7 @@ const genre = {
         "Angelfall",
     ],
 
-    Young_Adult: ["The Fault in Our Stars",
+    YoungAdult =["The Fault in Our Stars",
         "Harry Potter and the Philosopher's Stone",
         "Harry Potter and the Chamber of Secrets",
         "Harry Potter and the Goblet of Fire",
@@ -277,7 +166,7 @@ const genre = {
         "One Dark Window"
     ],
 
-    Fantasy:["Somewhere Beyond the Sea",
+    Fantasy=["Somewhere Beyond the Sea",
         "The Familiar",
         "The Ballad of Songbirds and Snakes",
         "Powerless",
@@ -343,4 +232,4 @@ const genre = {
         "Born at Midnight"
     ]
 
-}
+]
