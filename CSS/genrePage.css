@@ -222,6 +222,42 @@ body {
 .darkmode .banner {
     background-color: #246871;
 }
+/* Dark mode for "View Your Reading List" button and reading list */
+.darkmode .view-list-button {
+    background-color: #246871;
+    color: #fff;
+}
+
+.darkmode .reading-list {
+    background: #246871;
+    color: #fff;
+}
+
+.darkmode .reading-list h3,
+.darkmode .reading-list ul,
+.darkmode .reading-list li {
+    color: #fff;
+}
+.darkmode .popular-books-container {
+    background-color: #246871;
+}
+
+.darkmode .popular-category {
+    background-color: #21656e;
+    color: #fff;
+}
+
+.darkmode .popular-category h3 {
+    color: #B0E0E6;
+}
+
+.darkmode #most-popular {
+    background-color: #246871;
+}
+
+.darkmode .popular-books .book {
+    color: #fff;
+}
 /*hero image code edited from w3schools*/
 .hero-banner {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/banner image2.webp");
