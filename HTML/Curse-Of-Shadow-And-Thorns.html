@@ -105,13 +105,13 @@
                           <img class="d-block w-100 carousel-size" src="/img/ mocking jay.JPG" alt="mocking jay">
                         </a>
                       </div>
-                      <div class="carousel-item"></div>
+                      <div class="carousel-item">
                         <a href="#"><img class="d-block w-100 carousel-size" src="/img/a curse of true love .jpg" alt="curse of true love"></a>
                       </div>
                       <div class="carousel-item">
                         <a href="#"><img class="d-block w-100 carousel-size" src="/img/curse of shadows and thorns .jpg" alt="curse of shadowsand thorns"></a>
                       </div>
-                      <div class="carousel-item"></div>
+                      <div class="carousel-item">
                         <a href="#"><img class="d-block w-100 carousel-size" src="/img/the sunlit man.jpg" alt="sunlit man"></a>
                       </div>
                       <div class="carousel-item">
@@ -126,14 +126,13 @@
                       <div class="carousel-item">
                         <a href="#"><img class="d-block w-100 carousel-size" src="/img/the familiar.jpeg" alt="the familiar"></a>
                       </div>
-                      <div class="carousel-item"></div>
+                      <div class="carousel-item">
                         <a href="#"><img class="d-block w-100 carousel-size" src="/img/the hunger games.jpg" alt="the hunger games"></a>
                       </div>
-                      <div class="carousel-item"></div>
+                      <div class="carousel-item">
                         <a href="#"><img class="d-block w-100 carousel-size" src="/img/the king of battle and blood.jpeg" alt="the king of battle and blood"></a>
                       </div>
                       <div class="carousel-item">
-                      </div>
                         <a href="#"><img class="d-block w-100 carousel-size" src="/img/the midnight library.jpg" alt="the midnight library"></a>
                       </div>
                       <div class="carousel-item">
@@ -148,6 +147,8 @@
                       <div class="carousel-item">
                         <a href="#"><img class="d-block w-100 carousel-size" src="/img/the atlas six.jpg" alt="the atlas six"></a>
                       </div>
+                    </div>
+
         
                      <!--button that allows user to switch between prev and next images-->
                           <a class="carousel-control-prev custom-control" href="#carouselFantasy" role="button" data-slide="prev">
@@ -162,7 +163,6 @@
                       </div>
                     </div>
                   </div>
-            </div>
             <!-- Read Button -->
             <a href="https://spread.epub.pub/epub/615c65f889a67f2de6b2a031" class="read-button" target="_blank">
                 <span class="text">Read</span>
@@ -186,7 +186,42 @@
                 </div>
             </div>
         </div>
-    
+    <!-- Reading List Section  -->
+<div class="reading-list-section" style="background: #7898c2; border-radius: 18px; box-shadow: 0 2px 12px #b0e0e655; padding: 28px 22px 22px 22px; max-width: 400px; margin: 32px auto 0 auto;">
+    <div style="font-size: 1.3rem; font-weight: 600; color: #080808; margin-bottom: 12px; letter-spacing: 0.5px;">
+        <i class="fa-solid fa-book-heart" style="color:#66898e; margin-right:7px;"></i>
+        Reading List
+    </div>
+    <div style="display: flex; gap: 8px; margin-bottom: 14px;">
+        <input 
+            type="text" 
+            id="reading-input" 
+            placeholder="Add a book/article..." 
+            style="flex:1; border: 1.5px solid #689196; border-radius: 8px; padding: 7px 10px; background: #fff; color: #171818; font-size: 1rem; outline: none; transition: border 0.2s;"
+            onfocus="this.style.borderColor='#4682b4'"
+            onblur="this.style.borderColor='#b0e0e6'"
+        />
+        <button 
+            onclick="addToReadingList()" 
+            style="background: #b0e0e6; color: #080808; border: none; border-radius: 8px; padding: 7px 14px; font-size: 1.1rem; cursor: pointer; transition: background 0.2s;"
+            onmouseover="this.style.background='#4682b4'"
+            onmouseout="this.style.background='#b0e0e6'"
+            title="Add to Reading List"
+        >➕ Add</button>
+    </div>
+    <button 
+        onclick="showReadingList()" 
+        style="background: #fff; color: #2e3032; border: 1.5px solid #b0e0e6; border-radius: 8px; padding: 6px 12px; font-size: 1rem; font-weight: 500; margin-bottom: 12px; cursor: pointer; transition: background 0.2s, color 0.2s;"
+        onmouseover="this.style.background='#b0e0e6';this.style.color='#fff'"
+        onmouseout="this.style.background='#fff';this.style.color='#4682b4'"
+        title="Show Your Reading List"
+    >📚 View Your Reading List</button>
+    <div id="reading-list" style="margin-top: 10px;"></div>
+</div>
+
+
+
+
     <!-- Bootstrap JS + dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
@@ -194,5 +229,7 @@
     <script src="/JS/lightmodeDarkmode.js"></script>
     <script src="/JS/starRating.js"></script>
     <script src="/JS/readmore.js"></script>
+    <script src="/JS/ReadingList.js"></script>
+
 </body>
 </html>
