@@ -7,8 +7,8 @@
   <!--FAVICON-->
    <link rel="apple-touch-icon" sizes="180x180" href="/img/logo.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/img/logo.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/iimg/logo.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="/iimg/logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/logo.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/img/logo.png">
     <link rel="manifest" href="/site.webmanifest">
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -507,14 +507,26 @@
   </div>
 
 
-  <!-- Genre Banners -->
+  <!-- draggable boxes -->
 
-  <div class="banners-container">
-    <div class="banner"><strong>Romance</strong></div>
-    <div class="banner"><strong>Fantasy</strong></div>
-    <div class="banner"><strong>Young Adult</strong></div>
-    <div class="banner"><strong>Horror</strong></div>
-    <div class="banner"><strong>Dystopian</strong></div>
+      <div class="box-container">
+        <div class="selectionBox" draggable="true" id="romance"><strong>Romance</strong></div>
+        <div class="selectionBox" draggable="true" id="fantasy"><strong>Fantasy</strong>/div>
+        <div class="selectionBox" draggable="true" id="youngAdult"><strong>Young Adult</strong></div>
+        <div class="selectionBox" draggable="true" id="horror"><strong>Horror</strong></div>
+          <div class="selectionBox" draggable="true" id="dystopian"><strong>Dystopian</strong></div>
+      </div>
+
+   <!-- drop zones  for selectionBoxes-->
+  <br><br>
+      <div class="container">
+        <section class="dropZone"></section>
+        <section class="dropZone"></section>
+        <section class="dropZone"></section>
+      </div>
+
+  <div class="selectButton">
+    <button type="button" id="selectButton"><strong>select</strong></button>
   </div>
 
     <!--footer-->
@@ -532,6 +544,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <!--Moving Parts javascript-->
   <script src="/JS/movingParts.js"></script>
+      <script src="/JS/draggable.js"></script>
 <!--lightmode darkmode js-->
 <script src="/JS/lightmodeDarkmode.js"></script>
 

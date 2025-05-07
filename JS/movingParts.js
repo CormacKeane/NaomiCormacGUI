@@ -10,8 +10,13 @@ banners.forEach((banner) => {
 function dragElement(elmnt) {
   let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
 
+    //records start point of button
+    let StartTop=elmnt.offsetTop;
+    let StartSide=elmnt.offsetLeft;
+
+
     // When the user presses down on the element, begin the drag sequence
-  elmnt.onmousedown = dragMouseDown;
+
 
     // Called when mouse button is pressed down on the element
   function dragMouseDown(e) {
@@ -44,5 +49,14 @@ function dragElement(elmnt) {
   function closeDragElement() {
     document.onmouseup = null;
     document.onmousemove = null;
+
+    const genreBox = elmnt.getBoundingClientRect();
+    const selectBox = document.querySelectorAll(".dropZone");
+    let inZone =false;
+
+
+
+    elmnt.style.top = StartTop + "px";
+    elmnt.style.left = StartSide + "px";
   }
 }
