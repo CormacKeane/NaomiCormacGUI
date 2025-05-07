@@ -1,95 +1,4 @@
-//selection boxes
-const box = document.querySelectorAll('.selectionBox');
-let draggedElement=null;
-//dropzones
-const dropZones = document.querySelectorAll('section');
-//og spot
-const boxCon=document.querySelector('.box-container');
-
-//assigning drag to boxes
-box.forEach((el) => {
-    el.ondragstart = function(e) {
-        draggedElement = e.target;
-        this.style.opacity = '0.5';
-    }
-
-    el.ondragend = function(e) {
-        this.style.opacity = '1';
-    }
-})
-
-
-// Assign drop logic to all zones
-dropZones.forEach(zone => {
-    zone.addEventListener('dragover', function (e) {
-        e.preventDefault();
-        this.classList.add('over');
-    });
-
-    zone.addEventListener('dragleave', function () {
-        this.classList.remove('over');
-    });
-
-    zone.addEventListener('drop', function (e) {
-        e.preventDefault();
-        this.classList.remove('over');
-
-        // Only allow drop if the dropzone's empty
-        if (this.children.length === 0 && draggedElement) {
-            this.appendChild(draggedElement);
-        } else {
-            alert("one box per zone!")
-        }
-    });
-});
-
-//allows reseting box to og spot
-boxCon.addEventListener('dragover', function (e) {
-    e.preventDefault();
-});
-
-boxCon.addEventListener('drop', function (e) {
-    e.preventDefault();
-    if(draggedElement) {
-        this.appendChild(draggedElement);
-    }
-})
-
-
-function whatGenres() {
-    let zone1 = null;
-    let zone2 = null;
-    let zoneOne = null;
-    let zoneTwo = null;
-
-
-    for (let i = 0; i < dropZones.length; i++) {
-        const zone = dropZones[i];
-
-        if (zone.children.length > 0) {
-            const genreName=zone.children[0].textContent.trim();
-            if (i === 0) {
-                zoneOne =zone.children[0].textContent
-                zone1 =genre[genreName];
-            } else if (i === 1) {
-                zoneTwo =zone.children[0].textContent
-                zone2 =genre[genreName];
-            }
-        } else {
-            console.log("Dropzone "+(i + 1)+" is empty");
-        }
-    }
-
-    console.log(zoneOne+" and "+zoneTwo);
-    sortGenre(zone1,zone2);
-}
-
-
-
-
-
-
-function sortGenre(zone1,zone2) {
+/*function sort(zone1,zone2) {
     const overlappingBooks = zone1.filter(book => zone2.includes(book));
 
     console.log(overlappingBooks);
@@ -101,9 +10,9 @@ function sortGenre(zone1,zone2) {
 
 
 
-const genre = {
+const genre =[
 
-    Romance: ["The Love Hypothesis",
+    Romance =["The Love Hypothesis",
         "The Spanish Love Deception",
         "Flirting Lessons",
         "The Exiled Prince",
@@ -160,7 +69,7 @@ const genre = {
         "The Vincent Brothers",
         "Poison Study",
         "The Darkest Pleasure",
-        "Born at Midnight", "Powerless",
+        "Born at Midnight","Powerless",
         "Once Upon a Broken Heart",
         "The Ballad of Never After",
         "A Curse for True Love",
@@ -172,7 +81,7 @@ const genre = {
         "City of Bones",
         "One Dark Window"],
 
-    Dystopian: ["Unwind",
+    Dystopian = ["Unwind",
         "Thunderhead",
         "Scythe",
         "Divergent",
@@ -200,7 +109,8 @@ const genre = {
     ],
 
 
-    Horror: ["When the Bones Sing",
+
+    Horror = [ "When the Bones Sing",
         "It",
         "The Shining",
         "Mexican Gothic",
@@ -226,7 +136,7 @@ const genre = {
         "Angelfall",
     ],
 
-    Young_Adult: ["The Fault in Our Stars",
+    YoungAdult =["The Fault in Our Stars",
         "Harry Potter and the Philosopher's Stone",
         "Harry Potter and the Chamber of Secrets",
         "Harry Potter and the Goblet of Fire",
@@ -256,7 +166,7 @@ const genre = {
         "One Dark Window"
     ],
 
-    Fantasy:["Somewhere Beyond the Sea",
+    Fantasy=["Somewhere Beyond the Sea",
         "The Familiar",
         "The Ballad of Songbirds and Snakes",
         "Powerless",
@@ -322,119 +232,4 @@ const genre = {
         "Born at Midnight"
     ]
 
-}
-
-
-
-<!-- draggable boxes -->
-
-<div class="box-container">
-    <div class="selectionBox" draggable="true" id="romance"><strong>Romance</strong></div>
-    <div class="selectionBox" draggable="true" id="fantasy"><strong>Fantasy</strong></div>
-    <div class="selectionBox" draggable="true" id="youngAdult"><strong>Young_Adult</strong></div>
-    <div class="selectionBox" draggable="true" id="horror"><strong>Horror</strong></div>
-    <div class="selectionBox" draggable="true" id="dystopian"><strong>Dystopian</strong></div>
-</div>
-
-<!-- drop zones  for selectionBoxes-->
-<div class="dropBut-container">
-
-    <div class="drop-container">
-        <section class="dropZone"></section>
-        <section class="dropZone"></section>
-    </div>
-
-    <div class="selectButton">
-        <button type="button" id="selectButton" onclick="whatGenres()"><strong>select</strong></button>
-    </div>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /* draggable boxes */
-    .box-container {
-    display: flex;
-    margin-top: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    align-items: center;
-    gap: 100px;
-    justify-content: space-evenly;
-    overflow: visible;
-    width: 100%;
-    position: relative;
-}
-
-.selectionBox {
-    background-color: #B0E0E6;
-    width: 200px;
-    height: 60px;
-    padding: 16px;
-    box-sizing: border-box;
-    border-radius: 8px;
-    color: white;
-    cursor: grab;
-    text-align: center;
-    position: relative;
-}
-
-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    height: 100%;
-    width: 100%;
-}
-.dropBut-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 30px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.drop-container {
-    display: flex;
-    flex-direction: row;
-    gap: 50px;
-}
-
-.dropZone {
-    width: 180px;
-    height: 60px;
-    padding: 5px;
-    box-sizing: border-box;
-    border-radius: 8px;
-    border-color: white;
-    border-style: dashed;
-    position: relative;
-}
-
-
-#selectButton {
-    width: 180px;
-    height: 60px;
-    display: block;
-    position: relative;
-    background-color: #2D828D;
-    padding: 16px;
-    border-radius: 8px;
-    text-align: center;
-    color: white;
-    margin-top: 10px;
-}
+]
