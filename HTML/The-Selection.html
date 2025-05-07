@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>The Selection </title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- FAVICON -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/logo.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/logo.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/img/logo.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- My own CSS -->
+    <link rel="stylesheet" href="/CSS/bookDescriptionPage.css">
+    
+    <!-- Google Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    
+    <!-- FontAwesome Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #B0E0E6;">
+        <a class="navbar-brand" href="#">Mindbound</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/HTML/index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/HTML/genrePage.html">Genre</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0 align-items-center">
+                <div class="btn">
+                    <div class="btn_indicator">
+                        <div class="btn_icon-container">
+                            <i class="btn_icon fa-solid fa-sun"></i>
+                        </div>
+                    </div>
+                </div>
+                <a href="/HTML/SignInPage.html" target="_blank" class="nav-link p-0 ml-2">
+                    <span class="material-symbols-outlined" style="font-size: 28px;">how_to_reg</span>
+                </a>
+                <input class="form-control ml-2 mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="my-2 my-sm-0 custom-button" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    <!-- Wrapper for Image, Description, and Carousel -->
+    <div class="image-description-container">
+        <!-- Book Image Link -->
+        <a href="/HTML/The-Selection.html">
+            <img src="/img/the selection.jpg" alt="The Selection" class="book-image">
+        </a>
+
+        <!-- Book Description Box -->
+        <div class="description-box">
+            <!-- Book Title -->
+            <div class="book-title">The Selection</div>
+
+            <!-- Book Author -->
+            <div class="book-author">Kiera Cass</div>
+
+            <!-- Book Description -->
+            <p>
+                For thirty-five girls, the Selection is the chance of a lifetime. The opportunity to escape the life laid out for them since birth.
+                <span id="dots">...</span>
+                <span id="more">
+                    To be swept up in a world of glittering gowns and priceless jewels. To live in a palace and compete for the heart of gorgeous Prince Maxon. But for America Singer, being Selected is a nightmare. It means turning her back on her secret love with Aspen, who is a caste below her, and leaving her home to enter a fierce competition for a crown she doesn’t want.
+                </span>
+            </p>
+
+            <div class="book-pages">336 pages, Hardcover<br>
+                First published April 24, 2012</div>
+
+            <!-- Read More Button -->
+            <button onclick="myFunction()" id="myBtn">Read more</button>
+        </div>
+
+        <!-- Dystopian Genre-->
+<div class="col-6 col-md-2 mb-4">
+    <div class="carousel-container mainCarousel">
+        <div id="carouselDystopian" class="carousel slide" data-ride="carousel">
+            <div class="more-like-this"><i>More like The Selection...</i></div>
+            <div class="carousel-inner">
+                <!-- Carousel items start here -->
+                <div class="carousel-item active">
+                    <a href="#">
+                        <img class="d-block w-100 carousel-size" src="/img/allegiant .jpg" alt="allegiant">
+                        </a>
+                      </div>
+                      <div class="carousel-item">
+                        <a href="#">
+                          <img class="d-block w-100 carousel-size" src="/img/angelfall.jpg" alt="angelfall">
+                        </a>
+                      </div>
+                      <div class="carousel-item ">
+                        <img class="d-block w-100 carousel-size" src="/img/delirium.jpg" alt="delirium">
+                      </div>
+                      <div class="carousel-item ">
+                        <img class="d-block w-100 carousel-size" src="/img/divergent.jpg" alt="divergent">
+                      </div>
+                      <div class="carousel-item ">
+                        <img class="d-block w-100 carousel-size" src="/img/ignite me .webp" alt="ignite">
+                      </div>
+                      <div class="carousel-item ">
+                        <img class="d-block w-100 carousel-size" src="/img/Insurgent_(book).jpeg" alt="Insurgent_">
+                      </div>
+                      <div class="carousel-item ">
+                        <img class="d-block w-100 carousel-size" src="/img/legend.jpg" alt="legend">
+                      </div>
+                      <div class="carousel-item ">
+                        <img class="d-block w-100 carousel-size" src="/img/matched.jpg" alt="matched">
+                      </div>
+                      <div class="carousel-item ">
+                        <img class="d-block w-100 carousel-size" src="/img/red queen .jpg" alt="red">
+                      </div>
+                      <div class="carousel-item ">
+                        <img class="d-block w-100 carousel-size" src="/img/red rising .jpg" alt="rising">
+                      </div>
+                      <div class="carousel-item ">
+                        <img class="d-block w-100 carousel-size" src="/img/scythe.jpg" alt="scythe">
+                      </div>
+                      <div class="carousel-item ">
+                        <img class="d-block w-100 carousel-size" src="/img/shatter me.webp" alt="shatter">
+                      </div>
+                      <div class="carousel-item ">
+                        <img class="d-block w-100 carousel-size" src="/img/the 5th wave.webp" alt="5th">
+                      </div>
+                      <div class="carousel-item ">
+                        <img class="d-block w-100 carousel-size" src="/img/the darkest minds.jpg" alt="darkest">
+                      </div>
+                      <div class="carousel-item ">
+                        <img class="d-block w-100 carousel-size" src="/img/the handmaids tale.jpg" alt="handmaids">
+                      </div>
+                      <div class="carousel-item ">
+                        <img class="d-block w-100 carousel-size" src="/img/the maze runner.webp" alt="maze">
+                      </div>
+                      <div class="carousel-item ">
+                        <img class="d-block w-100 carousel-size" src="/img/the selection.jpg" alt="selection">
+                      </div>
+                      <div class="carousel-item ">
+                        <img class="d-block w-100 carousel-size" src="/img/thunderhead.jpg" alt="thunderhead">
+                      </div>
+                <!-- Carousel items end here -->
+            </div>
+            <!-- Carousel controls for navigation -->
+            <a class="carousel-control-prev custom-control" href="#carouselDystopian" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next custom-control" href="#carouselDystopian" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+</div>
+</div>
+
+
+    <!-- Read Button -->
+    <a href="https://fliphtml5.com/hwtlr/drgk/The_Selection/" class="read-button" target="_blank">
+        <span class="text">Read</span>
+        <span class="divider"></span>
+        <i class="book fa-solid fa-book-open"></i>
+    </a>
+
+    <!-- Star Rating -->
+    <div class="rating-wrapper">
+        <div class="rating" data-booksid="1">
+            <input type="radio" id="star5" name="clr1" value="5" />
+            <label for="star5" data-rating="5"></label>
+            <input type="radio" id="star4" name="clr1" value="4" />
+            <label for="star4" data-rating="4"></label>
+            <input type="radio" id="star3" name="clr1" value="3" />
+            <label for="star3" data-rating="3"></label>
+            <input type="radio" id="star2" name="clr1" value="2" />
+            <label for="star2" data-rating="2"></label>
+            <input type="radio" id="star1" name="clr1" value="1" />
+            <label for="star1" data-rating="1"></label>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+   <!-- Reading List Section  -->
+<div class="reading-list-section" style="background: #7898c2; border-radius: 18px; box-shadow: 0 2px 12px #b0e0e655; padding: 28px 22px 22px 22px; max-width: 400px; margin: 32px auto 0 auto;">
+    <div style="font-size: 1.3rem; font-weight: 600; color: #080808; margin-bottom: 12px; letter-spacing: 0.5px;">
+        <i class="fa-solid fa-book-heart" style="color:#66898e; margin-right:7px;"></i>
+        Reading List
+    </div>
+    <div style="display: flex; gap: 8px; margin-bottom: 14px;">
+        <input 
+            type="text" 
+            id="reading-input" 
+            placeholder="Add a book/article..." 
+            style="flex:1; border: 1.5px solid #689196; border-radius: 8px; padding: 7px 10px; background: #fff; color: #171818; font-size: 1rem; outline: none; transition: border 0.2s;"
+            onfocus="this.style.borderColor='#4682b4'"
+            onblur="this.style.borderColor='#b0e0e6'"
+        />
+        <button 
+            onclick="addToReadingList()" 
+            style="background: #b0e0e6; color: #080808; border: none; border-radius: 8px; padding: 7px 14px; font-size: 1.1rem; cursor: pointer; transition: background 0.2s;"
+            onmouseover="this.style.background='#4682b4'"
+            onmouseout="this.style.background='#b0e0e6'"
+            title="Add to Reading List"
+        >➕ Add</button>
+    </div>
+    <button 
+        onclick="showReadingList()" 
+        style="background: #fff; color: #2e3032; border: 1.5px solid #b0e0e6; border-radius: 8px; padding: 6px 12px; font-size: 1rem; font-weight: 500; margin-bottom: 12px; cursor: pointer; transition: background 0.2s, color 0.2s;"
+        onmouseover="this.style.background='#b0e0e6';this.style.color='#fff'"
+        onmouseout="this.style.background='#fff';this.style.color='#4682b4'"
+        title="Show Your Reading List"
+    >📚 View Your Reading List</button>
+    <div id="reading-list" style="margin-top: 10px;"></div>
+</div>
+
+ 
+    <!-- Bootstrap JS + dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/JS/lightmodeDarkmode.js"></script>
+    <script src="/JS/starRating.js"></script>
+    <script src="/JS/readmore.js"></script>
+    <script src="/JS/ReadingList.js"></script>
+
+</body>
+</html>

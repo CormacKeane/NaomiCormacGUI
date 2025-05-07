@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>The Ballad of Never After</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- FAVICON -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/logo.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/logo.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/img/logo.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- My own CSS -->
+    <link rel="stylesheet" href="/CSS/bookDescriptionPage.css">
+    
+    <!-- Google Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    
+    <!-- FontAwesome Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #B0E0E6;">
+        <a class="navbar-brand" href="#">Mindbound</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/HTML/index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/HTML/genrePage.html">Genre</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0 align-items-center">
+                <div class="btn">
+                    <div class="btn_indicator">
+                        <div class="btn_icon-container">
+                            <i class="btn_icon fa-solid fa-sun"></i>
+                        </div>
+                    </div>
+                </div>
+                <a href="/HTML/SignInPage.html" target="_blank" class="nav-link p-0 ml-2">
+                    <span class="material-symbols-outlined" style="font-size: 28px;">how_to_reg</span>
+                </a>
+                <input class="form-control ml-2 mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="my-2 my-sm-0 custom-button" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <!-- Wrapper for Image and Description (Flexbox Container) -->
+    <div class="image-description-container">
+        <!-- Book Image Link -->
+        <a href="/HTML/The-Ballad-Of-Never-After.html">
+            <img src="/img/the ballad of never after.jpeg" alt="The Ballad of Never After" class="book-image">
+        </a>
+
+        <!-- Book Description Box -->
+        <div class="description-box">
+            <!-- Book Title -->
+            <div class="book-title">The Ballad of Never After</div>
+
+            <!-- Book Author -->
+            <div class="book-author">Stephanie Garber</div>
+
+            <!-- Book Description -->
+            <p>
+                The Ballad of Never After is a spellbinding tale of love, betrayal, and destiny in a magical world.
+                <span id="dots">...</span>
+                <span id="more">
+                    Join the journey of characters caught in a web of secrets and enchantments as they navigate a world where nothing is as it seems. With twists and turns at every corner, this story will keep you captivated until the very end.
+                </span>
+            </p>
+            <div class="book-pages">416 pages, Hardcover<br>
+                First published September 13, 2022</div>
+                 <!-- Read More Button -->
+            <button onclick="myFunction()" id="myBtn">Read more</button>
+                
+        </div>
+         <!--Fantasy Genre-->
+         <div class="col-6 col-md-2 mb-4">
+            <div class="carousel-container mainCarousel">
+              <div id="carouselFantasy" class="carousel slide" data-ride="carousel">
+                <div class="more-like-this"><i>More like The Ballad of Never After ...</i></div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <a href="/HTML/City-Bones.html">
+                    <img class="d-block w-100 carousel-size" src="/img/ city of bones .jpg" alt="city of bones">
+                    </a>
+                  </div>
+                  <div class="carousel-item">
+                    <a href="/HTML/Mocking-Jay.html">
+                      <img class="d-block w-100 carousel-size" src="/img/ mocking jay.JPG" alt="mocking jay">
+                    </a>
+                  </div>
+                  <div class="carousel-item">
+                    <a href="#"><img class="d-block w-100 carousel-size" src="/img/a curse of true love .jpg" alt="curse of true love"></a>
+                  </div>
+                  <div class="carousel-item">
+                    <a href="#"><img class="d-block w-100 carousel-size" src="/img/curse of shadows and thorns .jpg" alt="curse of shadowsand thorns"></a>
+                  </div>
+                  <div class="carousel-item">
+                    <a href="#"><img class="d-block w-100 carousel-size" src="/img/the sunlit man.jpg" alt="sunlit man"></a>
+                  </div>
+                  <div class="carousel-item">
+                    <a href="#"><img class="d-block w-100 carousel-size" src="/img/PercySeamonsters.gif" alt="PercySeamonsters"></a>
+                  </div>
+                  <div class="carousel-item">
+                    <a href="#"><img class="d-block w-100 carousel-size" src="/img/the ballad of never after.jpeg" alt="the ballad of never after"></a>
+                  </div>
+                  <div class="carousel-item">
+                    <a href="#"><img class="d-block w-100 carousel-size" src="/img/the sun and the star.jpg" alt="the sun and the star"></a>
+                  </div>
+                  <div class="carousel-item">
+                    <a href="#"><img class="d-block w-100 carousel-size" src="/img/the familiar.jpeg" alt="the familiar"></a>
+                  </div>
+                  <div class="carousel-item">
+                    <a href="#"><img class="d-block w-100 carousel-size" src="/img/the hunger games.jpg" alt="the hunger games"></a>
+                  </div>
+                  <div class="carousel-item">
+                    <a href="#"><img class="d-block w-100 carousel-size" src="/img/the king of battle and blood.jpeg" alt="the king of battle and blood"></a>
+                  </div>
+                  <div class="carousel-item">
+                    <a href="#"><img class="d-block w-100 carousel-size" src="/img/the midnight library.jpg" alt="the midnight library"></a>
+                  </div>
+                  <div class="carousel-item">
+                    <a href="#"><img class="d-block w-100 carousel-size" src="/img/the sun and the star.jpg" alt="the sun and the star"></a>
+                  </div>
+                  <div class="carousel-item">
+                    <a href="#"><img class="d-block w-100 carousel-size" src="/img/the titans curse.jpg" alt="the titans curse"></a>
+                  </div>
+                  <div class="carousel-item">
+                    <a href="#"><img class="d-block w-100 carousel-size" src="/img/yumi and the nightmare painter .jpg" alt="yumi and the nightmare painter"></a>
+                  </div>
+                  <div class="carousel-item">
+                    <a href="#"><img class="d-block w-100 carousel-size" src="/img/the atlas six.jpg" alt="the atlas six"></a>
+                  </div>
+    
+                 <!--button that allows user to switch between prev and next images-->
+                      <a class="carousel-control-prev custom-control" href="#carouselFantasy" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="carousel-control-next custom-control" href="#carouselFantasy" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+        <!-- Read Button -->
+        <a href="https://online.fliphtml5.com/babjg/wstx/#p=1" class="read-button" target="_blank">
+            <span class="text">Read</span>
+            <span class="divider"></span>
+            <i class="book fa-solid fa-book-open"></i>
+        </a>
+
+        <!-- Star Rating -->
+        <div class="rating-wrapper">
+            <div class="rating" data-booksid="1">
+                <input type="radio" id="star5" name="clr1" value="5" />
+                <label for="star5" data-rating="5"></label>
+                <input type="radio" id="star4" name="clr1" value="4" />
+                <label for="star4" data-rating="4"></label>
+                <input type="radio" id="star3" name="clr1" value="3" />
+                <label for="star3" data-rating="3"></label>
+                <input type="radio" id="star2" name="clr1" value="2" />
+                <label for="star2" data-rating="2"></label>
+                <input type="radio" id="star1" name="clr1" value="1" />
+                <label for="star1" data-rating="1"></label>
+            </div>
+        </div>
+    </div>
+<!-- Reading List Section  -->
+<div class="reading-list-section" style="background: #7898c2; border-radius: 18px; box-shadow: 0 2px 12px #b0e0e655; padding: 28px 22px 22px 22px; max-width: 400px; margin: 32px auto 0 auto;">
+    <div style="font-size: 1.3rem; font-weight: 600; color: #080808; margin-bottom: 12px; letter-spacing: 0.5px;">
+        <i class="fa-solid fa-book-heart" style="color:#66898e; margin-right:7px;"></i>
+        Reading List
+    </div>
+    <div style="display: flex; gap: 8px; margin-bottom: 14px;">
+        <input 
+            type="text" 
+            id="reading-input" 
+            placeholder="Add a book/article..." 
+            style="flex:1; border: 1.5px solid #689196; border-radius: 8px; padding: 7px 10px; background: #fff; color: #171818; font-size: 1rem; outline: none; transition: border 0.2s;"
+            onfocus="this.style.borderColor='#4682b4'"
+            onblur="this.style.borderColor='#b0e0e6'"
+        />
+        <button 
+            onclick="addToReadingList()" 
+            style="background: #b0e0e6; color: #080808; border: none; border-radius: 8px; padding: 7px 14px; font-size: 1.1rem; cursor: pointer; transition: background 0.2s;"
+            onmouseover="this.style.background='#4682b4'"
+            onmouseout="this.style.background='#b0e0e6'"
+            title="Add to Reading List"
+        >➕ Add</button>
+    </div>
+    <button 
+        onclick="showReadingList()" 
+        style="background: #fff; color: #2e3032; border: 1.5px solid #b0e0e6; border-radius: 8px; padding: 6px 12px; font-size: 1rem; font-weight: 500; margin-bottom: 12px; cursor: pointer; transition: background 0.2s, color 0.2s;"
+        onmouseover="this.style.background='#b0e0e6';this.style.color='#fff'"
+        onmouseout="this.style.background='#fff';this.style.color='#4682b4'"
+        title="Show Your Reading List"
+    >📚 View Your Reading List</button>
+    <div id="reading-list" style="margin-top: 10px;"></div>
+</div>
+
+
+        
+    <!-- Bootstrap JS + dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/JS/lightmodeDarkmode.js"></script>
+    <script src="/JS/starRating.js"></script>
+    <script src="/JS/readmore.js"></script>
+    <script src="/JS/ReadingList.js"></script>
+
+</body>
+</html>

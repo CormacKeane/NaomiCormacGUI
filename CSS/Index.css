@@ -3,6 +3,8 @@ body {
   background-color: white;
   min-height: 1000px;
   margin: 0;
+  padding-bottom: 150px; 
+
 
 }
 /*search bar colour*/
@@ -170,4 +172,412 @@ cursor:pointer;
   text-align: center;
   color:white;
 }
- 
+ /* Carousel */
+/* Carousel Container */
+.carousel-container {
+  max-width: 100% !important; /* Ensures full-width */
+  margin: 0;
+  margin-bottom: 2rem;
+  padding: 0.5rem;
+  position: relative; /* Allows proper positioning of child elements */
+  overflow: hidden; /* Prevents overflowing content */
+}
+
+/* Carousel Image/Item */
+.carousel-item {
+  position: relative; /* Ensures previews position correctly */
+}
+
+/* Carousel Controls */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 20%;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: 10;
+}
+.carousel-genre-name {
+  text-align: center; /* Centers the text under the image */
+  font-size: 1.2rem; /* Adjusts the font size */
+  font-weight: bold; /* Makes the genre name bold */
+  margin-top: 10px; /* Adds spacing between image and genre name */
+  color:#B0E0E6; /* Adjust the color as needed */
+}
+
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: black;
+  background-size: 100% 100%;
+  border-radius: 50%;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  display: none !important;
+}
+
+.carousel-inner {
+  overflow: hidden !important; /* Prevents images from overflowing */
+}
+* Display preview on hover */
+.carousel-item:hover .book-preview {
+  display: block;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.carousel-size {
+  max-height: 500px !important; /* Adjusts image height */
+  margin-top: 10px;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Ensures the carousel items are properly aligned */
+.carousels-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.book-preview {
+  position: absolute;
+  top: 0;
+  left: 100%; /* places it just to the right of the image */
+  transform: translateX(10px);
+  background: #B0E0E6;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+  display: none;
+  width: 250px;
+  z-index: 999;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+pointer-events: none;
+}
+
+.carousel-item:hover .book-preview {
+  display: block;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#famous-quotes {
+  background-color:#36b2eb; 
+  padding: 50px 20px;
+  text-align: center;
+}
+
+
+.quote-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+#famous-quotes {
+  background-color:#e6ebed; 
+  padding: 50px 20px;
+  text-align: center;
+  margin-top: 20px; /* Adjust this value to move the section higher */
+}
+
+.quote {
+  background-color:#367210; 
+  border-radius: 8px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.quote:hover {
+  transform: translateY(-5px);
+}
+
+.quote-text {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #555;
+  margin-bottom: 10px;
+}
+.quote {
+  background-color:#a8dfc1; 
+  border-radius: 8px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.author {
+  font-size: 1rem;
+  color: #080707;
+  font-weight: bold;
+}
+
+.author em {
+  font-style: normal;
+}
+.row {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.column {
+  flex: 1;
+  max-width: 300px;
+  margin: 10px;
+}
+
+.card {
+  background-color: rgb(163, 231, 210);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.container h2 {
+  margin-top: 0;
+}
+
+.title {
+  color: gray;
+  font-size: 16px;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 10px 20px;
+  color: white;
+  background-color: rgb(163, 231, 210);
+  text-align: center;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: rgb(163, 231, 210);
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #2e974a;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+.favorites {
+  flex: 1;
+  padding: 20px;
+  background-color: #f0f8ff;
+  border-left: 1px solid #ccc;
+}
+
+.favorites h2 {
+  margin-top: 0;
+  font-family: Papyrus;
+}
+
+.favorites ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+.favorites {
+  flex: 2; 
+  padding: 20px;
+  background-color: #f0f8ff;
+  border-left: 1px solid #ccc;
+  height:800px;
+  min-height: 200px; 
+}
+.favorites li {
+  margin-bottom: 10px;
+}
+
+.favorites a {
+  text-decoration: none;
+  color: #0077cc;
+}
+
+.favorites a:hover {
+  text-decoration: underline;
+}
+.author-spotlight-section {
+  padding: 50px 20px;
+  background-color: #f0f8ff;
+  text-align: center;
+}
+
+.author-spotlight-section h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.author-spotlights {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+thor-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.author-card:hover {
+  transform: translateY(-5px);
+}
+
+.author-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.author-card h3 {
+  margin-top: 15px;
+  font-size: 1.4rem;
+  color: #fcfcfc;
+}
+
+.author-card p {
+  font-size: 0.95rem;
+  color: #ffffff;
+  margin: 10px 0 15px;
+}
+
+.author-card a {
+  text-decoration: none;
+  color: #fafafa;
+  font-weight: bold;
+}
+
+.author-card a:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+/*darkmode elements*/
+.darkmode .author-spotlight-section {
+  background-color: #22343a;
+  color: #e0f7fa;
+}
+
+.darkmode .author-card {
+  background-color: #2d3e44;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.darkmode .author-card h3 {
+  color: #e0f7fa;
+}
+
+.darkmode .author-card p {
+  color: #b0bec5;
+}
+
+.darkmode .author-card a {
+  color: #4fc3f7;
+}
+/* Dark mode for personal favourites */
+.darkmode .favorites {
+  background-color: #22343a;
+  border-left: 1px solid #444;
+  color: #e0f7fa;
+}
+
+.darkmode .favorites h2 {
+  color: #e0f7fa;
+}
+
+.darkmode .favorites a {
+  color: #4fc3f7;
+}
+
+.darkmode .favorites a:hover {
+  color: #90caf9;
+}
+
+/* Dark mode for cards */
+.darkmode .card {
+  background-color: #446470;
+  color: #e0f7fa;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.darkmode .card .title {
+  color: #b0bec5;
+}
+
+.darkmode .button {
+  background-color: #299dac;
+  color: #fff;
+}
+
+.darkmode .button:hover {
+  background-color: #555;
+}
+
+/* Dark mode for book quotes */
+.darkmode #famous-quotes {
+  background-color: #22343a;
+  color: #e0f7fa;
+}
+
+.darkmode .quote {
+  background-color: #446470;
+  color: #e0f7fa;
+}
+
+.darkmode .quote-text {
+  color: #b0bec5;
+}
+
+.darkmode .author {
+  color: #4fc3f7;
+}
