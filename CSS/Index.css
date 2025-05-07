@@ -459,8 +459,7 @@ pointer-events: none;
   gap: 40px;
   flex-wrap: wrap;
 }
-
-.author-card {
+thor-card {
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -484,21 +483,101 @@ pointer-events: none;
 .author-card h3 {
   margin-top: 15px;
   font-size: 1.4rem;
-  color: #222;
+  color: #fcfcfc;
 }
 
 .author-card p {
   font-size: 0.95rem;
-  color: #555;
+  color: #ffffff;
   margin: 10px 0 15px;
 }
 
 .author-card a {
   text-decoration: none;
-  color: #0077cc;
+  color: #fafafa;
   font-weight: bold;
 }
 
 .author-card a:hover {
   text-decoration: underline;
+  color: #fff;
+}
+/*darkmode elements*/
+.darkmode .author-spotlight-section {
+  background-color: #22343a;
+  color: #e0f7fa;
+}
+
+.darkmode .author-card {
+  background-color: #2d3e44;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.darkmode .author-card h3 {
+  color: #e0f7fa;
+}
+
+.darkmode .author-card p {
+  color: #b0bec5;
+}
+
+.darkmode .author-card a {
+  color: #4fc3f7;
+}
+/* Dark mode for personal favourites */
+.darkmode .favorites {
+  background-color: #22343a;
+  border-left: 1px solid #444;
+  color: #e0f7fa;
+}
+
+.darkmode .favorites h2 {
+  color: #e0f7fa;
+}
+
+.darkmode .favorites a {
+  color: #4fc3f7;
+}
+
+.darkmode .favorites a:hover {
+  color: #90caf9;
+}
+
+/* Dark mode for cards */
+.darkmode .card {
+  background-color: #446470;
+  color: #e0f7fa;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.darkmode .card .title {
+  color: #b0bec5;
+}
+
+.darkmode .button {
+  background-color: #299dac;
+  color: #fff;
+}
+
+.darkmode .button:hover {
+  background-color: #555;
+}
+
+/* Dark mode for book quotes */
+.darkmode #famous-quotes {
+  background-color: #22343a;
+  color: #e0f7fa;
+}
+
+.darkmode .quote {
+  background-color: #446470;
+  color: #e0f7fa;
+}
+
+.darkmode .quote-text {
+  color: #b0bec5;
+}
+
+.darkmode .author {
+  color: #4fc3f7;
 }
