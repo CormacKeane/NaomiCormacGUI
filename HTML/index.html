@@ -659,19 +659,18 @@
         <aside class="favorites">
     <h2>My Personal Favorites</h2>
     <ul>
-      <li><a href="/HTML/once-upon-a-broken-heart.html" target="_blank"><strong>Once Upon a Broken Heart</strong></a></li>
-      <li><a href="/HTML/red-white-and-royal-blue.html" target="_blank"><strong>Red, White & Royal Blue</strong></a></li>
-      <li><a href="/HTML/the-love-hypothesis.html" target="_blank"><strong>The Love Hypothesis</strong></a></li>
-      <li><a href="/HTML/the-song-of-achilles.html" target="_blank"><strong>The Song of Achilles</strong></a></li>
-      <li><a href="/HTML/a-court-of-thorns-and-roses.html" target="_blank"><strong>A Court of Thorns and Roses</strong></a></li>
-      <li><a href="/HTML/the-cruel-prince.html" target="_blank"><strong>The Cruel Prince</strong></a></li>
-      <li><a href="/HTML/six-of-crows.html" target="_blank"><strong>Six of Crows</strong></a></li>
-      <li><a href="/HTML/crescent-city.html" target="_blank"><strong>Crescent City</strong></a></li>
-      <li><a href="/HTML/the-invisible-life-of-addie-larue.html" target="_blank"><strong>The Invisible Life of Addie LaRue</strong></a></li>
-      <li><a href="/HTML/the-night-circus.html" target="_blank"><strong>The Night Circus</strong></a></li>
-      <li><a href="/HTML/the-priority-of-the-orange-tree.html" target="_blank"><strong>The Priory of the Orange Tree</strong></a></li>
-      <li><a href="/HTML/the-shadow-of-the-wind.html" target="_blank"><strong>The Shadow of the Wind</strong></a></li>
-      <li><a href="/HTML/the-seven-husbands-of-evelyn-hugo.html" target="_blank"><strong>The Seven Husbands of Evelyn Hugo</strong></a></li>
+      <li><a href="/HTML/Once-upon-a-Broken-Heart.html" target="_blank"><strong>Once Upon a Broken Heart</strong></a></li>
+      <li><a href="/HTML/Red-White.html" target="_blank"><strong>Red, White & Royal Blue</strong></a></li>
+      <li><a href="/HTML/Love-Hypothesis.html" target="_blank"><strong>The Love Hypothesis</strong></a></li>
+      <li><a href="/HTML/Song-of-Achillies.html" target="_blank"><strong>The Song of Achilles</strong></a></li>
+      <li><a href="/HTML/Poison-study.html" target="_blank"><strong>Poison Study</strong></a></li>
+      <li><a href="/HTML/Shatter-Me.html" target="_blank"><strong>Shatter Me</strong></a></li>
+      <li><a href="/HTML/Red-Rising.html" target="_blank"><strong>Red Rising</strong></a></li>
+      <li><a href="/HTML/Divergent.html" target="_blank"><strong>Divergent</strong></a></li>
+      <li><a href="/HTML/Born-At-Midnight.html" target="_blank"><strong>Born at Midnight</strong></a></li>
+      <li><a href="/HTML/Bird.Box.html" target="_blank"><strong>Bird Box</strong></a></li>
+      <li><a href="/HTML/Handmaids-Tale.html" target="_blank"><strong>Handmaids Tale</strong></a></li>
+      <li><a href="/HTML/Legend.html" target="_blank"><strong>Legend</strong></a></li>
     </ul>
   </aside>
   </aside>
@@ -724,27 +723,3 @@
 <script src="/JS/lightmodeDarkmode.js"></script>
 <!--Search Bar js-->
 <script src="/JS/SearchBar.js"></script>
-
-</body>
-</html>
-<script>
-  document.querySelector("form").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent form submission
-
-    const query = document.querySelector("input[type='search']").value.toLowerCase();
-    const links = document.querySelectorAll("a");
-
-    let found = false;
-
-    links.forEach(link => {
-      if (link.textContent.toLowerCase().includes(query)) {
-        found = true;
-        window.location.href = link.href; // Redirect to the matching link
-      }
-    });
-
-    if (!found) {
-      alert("No results found for your search.");
-    }
-  });
-</script></script>
